@@ -1,0 +1,24 @@
+ALGORITHM read_sentence
+VAR
+    s: STRING;
+    c: CHAR;
+    i: INTEGER := 0;
+    string_length: INTEGER := 0;
+    No_of_Words: INTEGER :=0;
+    No_of_Vowels: INTEGER :=0;
+BEGIN
+write('enter a string');
+readln(s);
+FOR i FROM 0 TO length(s) STEP step  DO
+    c=s[i];
+    string_length+=1;
+    IF (c='a' or c='e' or c='i' or c='o' or c='u') THEN
+        No_of_Vowels+=1;
+    END_IF
+    IF (c='' or c='.') THEN
+        No_of_Words+=1;
+    END_IF
+    i+=1;
+END_FOR
+
+END
